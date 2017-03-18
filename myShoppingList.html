@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="anjular.min.js"></script>
+<link rel = "stylesheet" href= "shop.css"/>
+
+<body>
+
+<script src="/shop.js" >
+
+</script>
+
+<div ng-app="myShoppingList" ng-controller="myCtrl" id="div1">
+  <h1> Shopping List</h1>
+    <ul>
+        <li ng-repeat="x in products">
+            {{x}}
+            <span ng-click="removeItem($index)">&times;</span>
+        </li>
+    </ul>
+    <input ng-model="addMe">
+    <button ng-click="addItem()">Add</button>
+    <p>{{errortext}}</p>
+</div>
+
+</body>
+</html>
